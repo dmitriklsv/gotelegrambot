@@ -1,37 +1,31 @@
-# kolesa-upgrade-homework-10
+### Task
+Create a scheduler telegram bot that can save the user and his tasks in the database and return them when requested
 
+**Telegram bot requirements:**
+1) Writing user data when calling the /start command
+2) Recording a task when calling the /addTask command
+3) Issuing all user tasks when calling the /tasks command
+4) Deleting a task by id when calling the /deleteTask {id} command
 
-**Ссылка к боту:**
-@nurzhas_bot
-
-### Задача
-Создать телеграм-бота планеровщика, который умеет сохранять пользователя и его задачи в БД и отдавать при запросе
-
-**Требования к телеграм-боту:**
-1) Запись данных пользователя при вызове команды /start
-2) Запись задачи при вызове команды /addTask
-3) Выдача всех задач пользователя при вызове команды /tasks
-4) Удаление задачи по id при вызове команды /deleteTask {id}
-
-**Параметры модели Пользователь**
+**Model parameters User**
 - name
 - telegram_id
 - first_name
 - last_name
 - chat_id
 - 
-**Параметры модели Задача**
+**Model parameters Task**
 1) title
 2) description
 3) end_date
 
-### Дополнительные требования
-1) Задачи должны быть связаны с пользователем в БД с помощью ключа foreignKey. 
-2) Получение задач должно быть реализовано с помощью has Many в пакете gorm
+### Additional requirements
+1) Tasks must be associated with a user in the database using the foreignKey key.
+2) Getting tasks should be implemented using has Many in the gorm package
 
-По желанию можно подключить БД Sqlite или Mysql
+Optionally, you can connect a Sqlite or Mysql database
 
-## Полезные ссылки
-- [Документация API Telegram](https://core.telegram.org/bots/api)
+## useful links
+- [Telegram API Documentation](https://core.telegram.org/bots/api)
 - [BotFather](https://t.me/BotFather)
-- [Документация gorm](https://gorm.io/docs/query.html)
+- [gorm documentation](https://gorm.io/docs/query.html)
